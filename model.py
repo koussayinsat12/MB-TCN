@@ -83,8 +83,3 @@ class MBTemporalConvNet(tf.keras.Model):
 
     def call(self, x, training):
         return self.network(x, training=training)
-
-# Test
-x = tf.convert_to_tensor(np.random.random((1, 10,10)))
-model = MBTemporalConvNet(1, 3, 64, 16, 256)
-y=model(x)
